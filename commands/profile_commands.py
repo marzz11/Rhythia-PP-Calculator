@@ -11,7 +11,7 @@ class ProfileCommands(commands.Cog):
         
         # Check if the user already has a profile
         if str(user_id) in self.bot.profiles:
-            await ctx.send("You already have a profile. You cannot create another one.")
+            await ctx.send("**You already have a profile. You cannot create another one.**")
             return
 
         channel = await self.bot.create_profile_channel(ctx, display_name, override)
@@ -33,6 +33,8 @@ class ProfileCommands(commands.Cog):
                 'unverified_pass_ids': []  # List for unverified pass IDs
             }
             self.bot.save_backup()  # Save backup after creating profile
+
+            # Send a single confirmation message
             await ctx.send(f"**Profile created successfully!**\n"
                            f"**Display Name:** {display_name}\n"
                            f"**Channel:** {channel.mention}")
@@ -80,6 +82,7 @@ class ProfileCommands(commands.Cog):
         # Remove the user profile from the bot's profile data
         del self.bot.profiles[str(user_id)]
         self.bot.save_backup()  # Save backup after deletion
+        await ctx.send("Your profile has been deleted.")
 
 async def setup(bot):
     await bot.add_cog(ProfileCommands(bot))
