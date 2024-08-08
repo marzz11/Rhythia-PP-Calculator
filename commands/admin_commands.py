@@ -126,16 +126,6 @@ class AdminCommands(commands.Cog):
             await message.edit(content=leaderboard_message)
 
     @commands.command()
-    async def updatelb(self, ctx):
-        """Update the leaderboard."""
-        if ctx.author.name != ADMIN_USERNAME:
-            await ctx.send("You do not have permission to use this command.")
-            return
-
-        await self.update_leaderboard()
-        await ctx.send("Leaderboard updated.")
-
-    @commands.command()
     async def stop(self, ctx):
         """Stop the bot and save a backup."""
         if ctx.author.name != ADMIN_USERNAME:
