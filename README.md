@@ -1,4 +1,4 @@
-# Rhythia PP Score Calculator Bot
+# Rhythia PP Score Calculator Bot V1.3.1
 
 Welcome to the **[Rhythia](https://github.com/David20122/sound-space-plus) PP Score Calculator Bot**! 🎶
 
