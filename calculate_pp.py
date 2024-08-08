@@ -40,13 +40,13 @@ def calculate_pp(song_speed, accuracy, song_difficulty):
         song_difficulty = float(song_difficulty)
         
         if not (70 <= song_speed <= 200):
-            return "Song speed must be between 70% and 200%"
+            return "**Song speed must be between 70% and 200%**"
         
         if not (1 <= song_difficulty <= 50):
-            return "Song difficulty must be between 1 and 50"
+            return "**Song difficulty must be between 1 and 50**"
         
         if not (0.01 <= accuracy <= 100):
-            return "Song accuracy must be between 0.01 and 100"
+            return "**Song accuracy must be between 0.01 and 100**"
         
         base_pp = 300
         if song_speed < 100:
@@ -68,7 +68,7 @@ def calculate_pp(song_speed, accuracy, song_difficulty):
         
         return final_pp
     except ValueError:
-        return "Please enter valid numbers."
+        return "**Please enter valid numbers.**"
 
 def load_backup():
     """Load the backup data from a JSON file."""
