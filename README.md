@@ -6,7 +6,7 @@ This Discord bot is designed specifically for players of **Rhythia**, providing 
 
 ## Current Status
 
-Please note that this bot is currently in **beta**. As a work in progress, it may undergo updates and improvements. Your feedback is invaluable, so feel free to share your thoughts and experiences!
+Please note that this bot is currently in **beta**. As a work in progress, it may undergo updates and improvements. Your feedback is valuable, so feel free to share your thoughts and experiences!
 
 ## Usage Guidelines
 
