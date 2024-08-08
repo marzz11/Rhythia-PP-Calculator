@@ -1,6 +1,14 @@
+from config import STATUS_CHANNEL_ID, ADMIN_USERNAME
 from discord.ext import commands
-from config import ADMIN_USERNAME
 import discord
+
+intents = discord.Intents.default()
+intents.message_content = True
+intents.guilds = True
+intents.guild_messages = True
+intents.members = True
+
+bot = commands.Bot(command_prefix='/ppcal ', intents=intents)
 
 class AdminCommands(commands.Cog):
     def __init__(self, bot):
@@ -133,6 +141,10 @@ class AdminCommands(commands.Cog):
         if ctx.author.name != ADMIN_USERNAME:
             await ctx.send("You do not have permission to use this command.")
             return
+
+        channel = self.bot.get_channel(STATUS_CHANNEL_ID)
+        if channel:
+            await channel.edit(name='STATUS: 🔴')
 
         if hasattr(self.bot, 'save_backup'):
             self.bot.save_backup()
