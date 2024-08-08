@@ -1,6 +1,6 @@
 # Rhythia PP Score Calculator Bot
 
-Welcome to the **Rhythia PP Score Calculator Bot**! 🎶
+Welcome to the **[Rhythia](https://github.com/David20122/sound-space-plus) PP Score Calculator Bot**! 🎶
 
 This Discord bot is designed specifically for players of **Rhythia**, providing an efficient way to calculate and track your Performance Points (PP) scores. Whether you're a casual player aiming to improve or a competitive player striving for the top, this bot will enhance your gaming experience by offering insightful metrics on your performance.
 
